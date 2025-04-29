@@ -1,0 +1,29 @@
+# === Node Modules ===
+node_modules/
+
+# === Environment Variables ===
+.env
+.env.local
+.env.development
+.env.production
+
+# === Logs ===
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === OS-specific files ===
+.DS_Store
+Thumbs.db
+
+# === Build directories ===
+dist/
+build/
+
+# === IDE files ===
+.vscode/
+.idea/
+
+# === Optional ===
+*.log
+*.cache
