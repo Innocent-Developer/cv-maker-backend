@@ -22,7 +22,7 @@ const accountCreateSchema = new Schema({
     tital:{
         type: String,
         // enum:['Web Developer','App Developer','Data Scientist','AI Engineer','ML Engineer','Cloud Engineer','Cyber Security Expert','DevOps Engineer'],
-        required: true
+       
     },
     Email: {
         type: String,

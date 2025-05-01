@@ -1,17 +1,25 @@
 const express = require("express");
-const app = express();
+const cors = require("cors"); // ✅ Add this
 const dotenv = require("dotenv");
-dotenv.config();
-
 const routers = require("./routes/routes");
 const connectDB = require("./database/connectdb");
 
-// Connect to database
-connectDB();
+dotenv.config();
+
+const app = express();
+
+// ✅ Use CORS middleware
+app.use(cors({
+  origin: "*", // Frontend origin
+  credentials: true
+}));
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Connect to database
+connectDB();
 
 // Routes
 app.use("/", routers);
